@@ -72,7 +72,7 @@ def save_data(df, database_filename):
     
     # write data to a SQLite file in current directory
     db = database_filename
-    engine = create_engine('sqlite:///{}.db'.format(db))
+    engine = create_engine('sqlite:///{}'.format(db))
     df.to_sql('Messages', engine, index=False, if_exists="replace", chunksize=20)  
 
 
