@@ -111,7 +111,7 @@ def evaluate_model(model, X_test, Y_test, category_names):
     nothing
     """
     Y_pred = pd.DataFrame(model.predict(X_test), columns=category_names)
-    print(classification_report(Y_test, Y_pred, target_names=category_names, digits=2, zero_division=1))
+    print(classification_report(Y_test, Y_pred, target_names=category_names, digits=2))
 
 
 def save_model(model, model_filepath):
