@@ -55,9 +55,15 @@ def clean_data(df):
     df.drop(["categories"], axis=1, inplace=True)
     df = pd.concat([df, categories], axis=1)
     
-    # drop duplicates and return clean dataframe
+    # remove ID column and drop duplicate rows
     columns = df.drop(["id"], axis=1).columns
     df.drop_duplicates(subset=columns, keep="first", inplace=True)
+    
+    # drop rows with values that are not 0 or 1
+    df_test = df.iloc[:, 4:]
+    rows = df_test[~df_test.isin([0,1]).iloc[:,0]].index
+    df.drop(rows, axis=0, inplace=True)
+    
     return df
 
 def save_data(df, database_filename):
