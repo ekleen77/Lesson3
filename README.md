@@ -41,12 +41,10 @@
 <br>'python run.py'
 
 ### <a name="Motivation"></a>Project Motivation
-
-### <a name="BusinessUnderstanding"></a>Business Understanding
-
-### <a name="DataUnderstanding"></a>Data Understanding
+Use real-world data to explore the use of Pipelines and Machine Learning models in Python classify text messages during a disaster.
 
 ### <a name="ETLPipeline"></a>ETL Pipeline
+The original data is contained in 2 separate files, one containing text messages in original language and an English translation.  The second file contains all of the classifications that relate to each message.  Some of the challenges with the raw data are 1) a single message may appear multiple times with different unique id numbers, 2) the categories for each message combined into a single text string and need to be parsed, and 3) some messages have a category indicator of 2 while the only values allowed should be 0 or 1.  During this process, the data is read in from both files and joined using the \[id\] field.  The categories are then separated into individual columns and the numerical values of 0 and 1 are then used to indicate if the message is or is not associated.  Finally, the rows with duplicate messages or invalid numerical values are removed from the data.  The resulting clean dataset is then exported to a sqlite database for use by the ML Pipeline process.
 
 ### <a name="MLPipeline"></a>ML Pipeline
 
