@@ -27,7 +27,7 @@ def tokenize(text):
 
 # load data
 engine = create_engine('sqlite:///../data/DisasterResponse.db')
-df = pd.read_sql_table('DisasterData', engine)
+df = pd.read_sql_table('Messages', engine)
 
 # load model
 model = joblib.load("../models/classifier.pkl")
@@ -39,21 +39,24 @@ model = joblib.load("../models/classifier.pkl")
 def index():
     
     # extract data needed for visuals
-    # TODO: Below is an example - modify to extract data for your own visuals
+    ## data for genre distribution
     genre_counts = df.groupby('genre').count()['message']
     genre_names = list(genre_counts.index)
     
-    category_counts = (df.iloc[:,4:]).sum().values
-    category_names = df.iloc[:,4:].columns
+    ## data for 'most common' / 'least common' charts
+    df2 = df.iloc[:,4:].copy().sum().sort_values(ascending=False)
+    most_common = df2[:10]
+    least_common = df2[-10:]
     
     # create visuals
-    # TODO: Below is an example - modify to create your own visuals
+
     graphs = [
+        ## genre distribution
         {
             'data': [
                 Bar(
-                    x = genre_names,
-                    y = genre_counts
+                    x=genre_names,
+                    y=genre_counts
                 )
             ],
 
@@ -68,32 +71,47 @@ def index():
             }
         },
         
-        # 2. graph displaying the distribution on the categories
-        
+        ## most common categories
         {
             'data': [
                 Bar(
-                    x = category_names,
-                    y = category_counts
+                    x = most_common.index,
+                    y = most_common.values
                 )
             ],
 
             'layout': {
-                'title': 'Distribution of Categories',
+                'title': 'Most Common Categories',
                 'yaxis': {
                     'title': "Count"
                 },
                 'xaxis': {
                     'title': "Category",
-                    'tickangle': 45,
-                    'categoryorder': "category ascending",
-                    'tickfont': {
-                        'size' : 9
-                    }
+                    'tickangle': -45
                 },
             }
         },
-        
+                
+        ## least common categories
+        {
+            'data': [
+                Bar(
+                    x = least_common.index,
+                    y = least_common.values
+                )
+            ],
+
+            'layout': {
+                'title': 'Least Common Categories',
+                'yaxis': {
+                    'title': "Count"
+                },
+                'xaxis': {
+                    'title': "Category",
+                    'tickangle': -45
+                },
+            }
+        }
     ]
     
     # encode plotly graphs in JSON
