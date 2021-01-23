@@ -50,6 +50,7 @@ The ML process uses the cleaned dataset contained in 'DisasterResponse.db' to co
 
 ## <a name="Evaluation"></a>Evaluation
 Model performance was assessed using classification_report to generate the f1 and recall values for each category.  I did find that the model performance improved slightly by using the Grid Search recommended values so I feel confident that, given more time, I could test additional values and parameters to improve it even more.  I also evaluated another model using the KNeighborsClassifier class as the estimator with default settings.  I found that the results of this model were significantly worse than the Random Forest model using default settings, but this may change given more time to try other values as well.
+
 ![](https://github.com/ekleen77/Lesson3/blob/main/Results.PNG?raw=true)
 
 ## <a name="Deployment"></a>Deployment
