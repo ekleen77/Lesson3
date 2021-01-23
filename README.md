@@ -5,13 +5,11 @@
 1. [Folder Structure](#FolderStructure)
 2. [Installation](#Installation)
 3. [Project Motivation](#Project)
-4. [Business Understanding](#BusinessUnderstanding)
-5. [Data Understanding](#DataUnderstanding)
-6. [ETL Pipeline](#ETLPipeline)
-7. [ML Pipeline](#MLPipeline)
-8. [Evaluation](#Evaluation)
-9. [Deployment](#Deployment)
-10. [Licensing, Authors, Acknowledgements](#License)
+4. [ETL Pipeline](#ETLPipeline)
+5. [ML Pipeline](#MLPipeline)
+6. [Evaluation](#Evaluation)
+7. [Deployment](#Deployment)
+8. [Licensing, Authors, Acknowledgements](#License)
 
 ## <a name="FolderStructure"></a>Folder Structure
 -   app  
