@@ -26,7 +26,6 @@
 -   models  
     |- train_classifier.py  # python code that generates and exports the ML model
     |- classifier.pkl  # saved model
--   README.md
 
 ## <a name="Installation"></a>Installation
 1. Additional Libraries: No additional libraries are required.
