@@ -1,6 +1,6 @@
 # How Machine Learning Can Improve Disaster Response
 ![](https://nplusonemag.com/wp-content/uploads/2017/09/37178284932_44dedea535_z.jpg)
-<br>source: https</span>://nplusonemag</span>.com/online-only/online-only/austerity-natural-disaster/
+<br><sub>source: https<span></span>://nplusonemag<span></span>.com/online-only/online-only/austerity-natural-disaster/</sub>
 
 ## Table of Contents
 1. [Folder Structure](#FolderStructure)
