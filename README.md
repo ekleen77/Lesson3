@@ -1,4 +1,4 @@
-# USING PIPELINES TO CREATE A MACHINE LEARNING MODEL
+# How Machine Learning Can Improve Disaster Response
 ![](https://github.com/ekleen77/Lesson3/blob/main/Capture.PNG?raw=true)
 
 ## Table of Contents
@@ -14,17 +14,17 @@
 ## <a name="FolderStructure"></a>Folder Structure
 -   app  
     | - template  
-    | |- master.html    # web app landing page
-    | |- go.html    # classification result page of web app  
-    |- run.py    # Flask file that runs app
+    | |- master.html  # main page of web app
+    | |- go.html  # classification result page of web app  
+    |- run.py  # Flask file that runs app
 -   data  
-    |- disaster_categories.csv # data to process  
-    |- disaster_messages.csv # data to process  
-    |- process_data.py  
+    |- disaster_categories.csv  # data to process  
+    |- disaster_messages.csv  # data to process  
+    |- process_data.py  # python code to combine and clean datasets
     |- DisasterResponse.db # database to save clean data to
 -   models  
-    |- train_classifier.py  
-    |- classifier.pkl # saved model
+    |- train_classifier.py  # python code that generates and exports the ML model
+    |- classifier.pkl  # saved model
 -   README.md
 
 ## <a name="Installation"></a>Installation
