@@ -1,5 +1,5 @@
 # How Machine Learning Can Improve Disaster Response
-![](https://github.com/ekleen77/Lesson3/blob/main/37178284932_44dedea535_z.jpg?raw=true)
+![](https://nplusonemag.com/wp-content/uploads/2017/09/37178284932_44dedea535_z.jpg)
 
 ## Table of Contents
 1. [Folder Structure](#FolderStructure)
