@@ -3,16 +3,16 @@
 <br><sub>source: https<span></span>://nplusonemag<span></span>.com/online-only/online-only/austerity-natural-disaster/</sub>
 
 ## Table of Contents
-1. [Folder Structure](#FolderStructure)
+1. [Folder Structure](#Structure)
 2. [Installation](#Installation)
-3. [Project Motivation](#Project)
+3. [Project Motivation](#Motivation)
 4. [ETL Pipeline](#ETLPipeline)
 5. [ML Pipeline](#MLPipeline)
 6. [Evaluation](#Evaluation)
 7. [Deployment](#Deployment)
 8. [Licensing, Authors, Acknowledgements](#License)
 
-## <a name="FolderStructure"></a>Folder Structure
+## <a name="Structure"></a>Folder Structure
 -   app  
     | - template  
     | |- master.html  # main page of web app
@@ -29,8 +29,18 @@
 -   README.md
 
 ## <a name="Installation"></a>Installation
+1. Additional Libraries: No additional libraries are required.
 
-### <a name="Project"></a>Project Motivation
+2. ETL Process: In the 'data' folder execute the command line below to process the datasets and output the sqlite database.
+<br>'python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db'
+
+2. ML Model: In the 'models' folder execute the command line below to use the cleaned date to generate the ML model.
+<br>'python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl'
+
+3. Flask Web App: In the 'app' folder execute the command line below to initiate the web app then open in web browser.
+<br>'python run.py'
+
+### <a name="Motivation"></a>Project Motivation
 
 ### <a name="BusinessUnderstanding"></a>Business Understanding
 
