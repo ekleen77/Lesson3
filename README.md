@@ -1,5 +1,5 @@
 # How Machine Learning Can Improve Disaster Response
-![](https://github.com/ekleen77/Lesson3/blob/main/Capture.PNG?raw=true)
+![]()
 
 ## Table of Contents
 1. [Folder Structure](#FolderStructure)
